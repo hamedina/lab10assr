@@ -1,4 +1,6 @@
+
 const mongoose = require('mongoose')
+mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://alperalt:final12.@cluster0.kwbimey.mongodb.net/router_db', {
     useNewUrlParser: true,
 },
@@ -9,5 +11,6 @@ mongoose.connect('mongodb+srv://alperalt:final12.@cluster0.kwbimey.mongodb.net/r
         console.log('Error in connection' + err);
     }
 });
+
 
 require('./routes.model');

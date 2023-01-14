@@ -7,11 +7,14 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const bodyparser = require('body-parser')
 const { engine } = require('express-handlebars');
 const routes_controller = require('./controllers/routes_controller')
+const { default: mongoose } = require('mongoose')
 
 var app = express();
 
 app.use(bodyparser.urlencoded({extended: false}))
 app.use(bodyparser.json())
+
+
 
 app.get('/', (req, res) => {
     res.send(`
