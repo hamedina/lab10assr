@@ -33,7 +33,7 @@ app.engine('hbs', exphbs.engine({
         layoutsDir: __dirname + "/views/layouts/",
     })
 );
-
+//all holsa
 app.set('view engine', 'hbs');
 
 app.listen(3000, () => {
